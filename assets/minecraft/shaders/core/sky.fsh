@@ -83,7 +83,7 @@ vec3 backgroundColor3D(in vec3 rd) {
     
     starShape = clamp(starShape - baseThreshold + falloffRadius, 0.0, 1.0);
     
-    float weight = starShape / (2.0 * falloffRadius);
+    float weight = starShape / (5.0 * falloffRadius);
     return weight * vec3(noise1 * 0.55, noise2 * 0.4, noise3 * 1.0) * 6.0; 
 }
 
