@@ -1,0 +1,2 @@
+execute store result storage game main.instance.storage.global.timestamp int 1 run scoreboard players get #storage.global.timestamp V
+data modify entity @s data set from storage game main.instance.storage

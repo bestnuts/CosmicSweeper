@@ -1,0 +1,1 @@
+execute if entity @s[tag=entity.type.storage] run return run function main:core/entity/marker/type/storage/tick

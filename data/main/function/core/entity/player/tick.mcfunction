@@ -1,0 +1,1 @@
+execute if function package:api/condition/entity/player/is_join run return run function main:core/entity/player/handler/join/run

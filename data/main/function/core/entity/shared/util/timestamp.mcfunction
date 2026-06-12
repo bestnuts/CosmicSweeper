@@ -1,0 +1,1 @@
+execute if score @s timestamp < #gametime V run function main:core/entity/shared/util/kill

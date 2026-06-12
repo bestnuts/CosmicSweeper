@@ -1,0 +1,1 @@
+data modify storage game main.instance.database set value {global:{timestamp:0},item:{last_id:0}}
