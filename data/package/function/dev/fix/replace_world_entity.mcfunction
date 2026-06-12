@@ -1,0 +1,2 @@
+kill @e[type=item_display,tag=world_entity]
+summon item_display 0.0 64.0 0.0 {Tags:["world_entity"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,1024f],scale:[1f,1f,1f]},item:{id:"minecraft:leather_horse_armor",count:1,components:{"minecraft:item_model":"world:sun"}}}
