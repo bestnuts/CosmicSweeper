@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "criteria": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:wooden_spear"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "package:api/call/right_click"
+  }
+}

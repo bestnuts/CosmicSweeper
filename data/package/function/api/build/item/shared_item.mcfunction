@@ -1,0 +1,1 @@
+$summon item ~ ~ ~ {Item:{id:"minecraft:$(type)",count:1,components:{"minecraft:item_name":$(name),"minecraft:item_model":"$(model)","minecraft:custom_data":{id:$(id),data:$(args)}$(components)}}}
