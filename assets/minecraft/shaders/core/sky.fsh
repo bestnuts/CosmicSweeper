@@ -88,7 +88,7 @@ vec3 backgroundColor3D(in vec3 rd) {
 }
 
 vec3 renderSky(in vec3 ro, in vec3 rd) {
-    vec3 localRd = normalize(rd);
+    vec3 localRd = rd;
 
     float angle = 0.3; 
     float s = sin(angle);
