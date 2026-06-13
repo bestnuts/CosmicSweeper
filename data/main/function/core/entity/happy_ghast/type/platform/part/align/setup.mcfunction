@@ -1,0 +1,2 @@
+execute store result storage game main.instance.value.x double 1 run data get entity @s data.platform.coordinate.[0]
+execute store result storage game main.instance.value.z double 1 run data get entity @s data.platform.coordinate.[1]

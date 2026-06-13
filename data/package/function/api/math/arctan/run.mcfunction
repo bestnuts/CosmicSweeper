@@ -1,0 +1,1 @@
+execute summon marker run function package:api/math/arctan/result with storage game main.instance.math

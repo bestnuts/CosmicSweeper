@@ -1,0 +1,1 @@
+execute if entity @s[tag=entity.type.platform] run return run function main:core/entity/happy_ghast/type/platform/tick

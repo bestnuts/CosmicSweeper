@@ -1,0 +1,1 @@
+$execute positioned 0.0 0.0 0.0 rotated $(degree) 0 positioned ^ ^ ^1 summon marker run function package:api/math/sincos/result
