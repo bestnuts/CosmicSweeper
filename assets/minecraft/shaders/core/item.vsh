@@ -50,8 +50,8 @@ void main() {
 
     drawType = 0;
     ivec4 iColor = ivec4(texture(Sampler0, UV0) * 255.0);
-    if (iColor == ivec4(1, 2, 3, 254)) {
-        drawType = 1;
+    if (iColor.gba == ivec3(2, 3, 254)) {
+        drawType = iColor.r;
     }
     if (drawType == 0) {
         gl_Position = ProjMat * ModelViewMat * vec4(Position, 1.0);
