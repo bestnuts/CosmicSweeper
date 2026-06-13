@@ -1,3 +1,3 @@
 kill @e[tag=world.entity]
 function package:api/place/center_platform/run
-summon item_display 0.0 64.0 0.0 {Tags:["world.entity"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,1024f],scale:[1f,1f,1f]},item:{id:"minecraft:leather_horse_armor",count:1,components:{"minecraft:item_model":"world:sun"}}}
+summon item_display 0.0 64.0 0.0 {Tags:["world.entity"],view_range:4f,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,2048f],scale:[1f,1f,1f]},item:{id:"minecraft:leather_horse_armor",count:1,components:{"minecraft:item_model":"world:sun"}}}
