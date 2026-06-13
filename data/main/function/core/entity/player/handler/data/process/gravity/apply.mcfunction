@@ -1,0 +1,2 @@
+execute positioned ~ 63.0 ~ if entity @n[type=happy_ghast,tag=entity.type.platform,dx=0,dy=0,dz=0] run return run attribute @s minecraft:gravity base set 0.02
+attribute @s minecraft:gravity base set 0.005
