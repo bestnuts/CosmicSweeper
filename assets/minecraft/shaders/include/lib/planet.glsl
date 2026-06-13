@@ -63,10 +63,9 @@ vec4 drawPlanet(vec3 ro, vec3 rd, float r, vec3 skyColor, vec3 atmosphereGlow, o
     vec3 OCEAN_COLOR = vec3(0.1, 0.15, 0.35);
     vec3 ATMOSPHERE_COLOR = skyColor;
     vec3 CLOUD_COLOR = vec3(1.0);
-    float AMBIENT_LIGHT = 0.2;
+    float AMBIENT_LIGHT = 0.08;
 
-    float glowScatter = 0.1;
-    float glowIntensity = 0.2;
+    vec3 LIGHT_DIR = normalize(vec3(1.5, 0.5, -1.0));
 
     float rdLen2 = dot(rd, rd);
     float rayProj = dot(ro, rd) / rdLen2;
@@ -78,7 +77,7 @@ vec4 drawPlanet(vec3 ro, vec3 rd, float r, vec3 skyColor, vec3 atmosphereGlow, o
     vec3 hitPos = ro + tClosest * rd;
 
     float hitPlanet = smoothstep(0.01, 0.0, length(hitPos) - r);
-    float corona = smoothstep(0.5 * r * r, 0.0, dot(hitPos, hitPos) - r * r);
+    float corona = smoothstep(0.4 * r * r, 0.0, dot(hitPos, hitPos) - r * r);
 
     if (discriminant < 0.0 && corona <= 0.0) {
         return vec4(0.0);
@@ -111,19 +110,24 @@ vec4 drawPlanet(vec3 ro, vec3 rd, float r, vec3 skyColor, vec3 atmosphereGlow, o
     float shine = (1.0 + z) / max(0.001, dot(planar, planar));
     float glow = clamp(1.0 / length(ro) - 0.1 * length(planar), 0.0, 1.0);
 
-    float viewNDot = max(0.0, dot(rawNorm, -rd));
-    vec3 lighting = vec3(mix(0.4, 1.0, viewNDot));
+    float lightDot = max(0.0, dot(rawNorm, LIGHT_DIR));
+    vec3 lighting = vec3(lightDot);
 
     surfaceColor *= lighting + vec3(AMBIENT_LIGHT);
     vec3 finalCloudColor = CLOUD_COLOR * (lighting + vec3(AMBIENT_LIGHT));
 
     vec4 mixedSurface = mix(vec4(surfaceColor, 1.0), vec4(finalCloudColor, cloudAlpha), cloudAlpha * hitPlanet);
     
-    vec3 earthAtmosColor = ATMOSPHERE_COLOR + surfaceColor * 0.1;
-    vec3 col = (glowScatter * shine) * skyColor + vec3(0.5 * hitPlanet + 0.5 * corona) * earthAtmosColor + glow * atmosphereGlow * glowIntensity;
+    float viewNDot = max(0.0, dot(rawNorm, -rd));
+    float frontAtmosScatter = pow(1.0 - viewNDot, 2.0) * 0.6 + pow(lightDot, 2.0) * 0.4;
+    vec3 earthAtmosColor = ATMOSPHERE_COLOR * (lightDot * 1.2 + 0.2);
+
+    mixedSurface.rgb = mix(mixedSurface.rgb, earthAtmosColor, frontAtmosScatter * hitPlanet);
+    
+    vec3 col = (0.05 * shine) * skyColor + vec3(0.3 * hitPlanet + 0.7 * corona) * earthAtmosColor + glow * atmosphereGlow * 0.15;
 
     vec4 finalPlanetColor = mix(vec4(col, corona), mixedSurface, hitPlanet);
-    finalPlanetColor.rgb += atmosphereGlow * vec3(corona * (1.0 - hitPlanet) * glowIntensity);
+    finalPlanetColor.rgb += atmosphereGlow * vec3(corona * (1.0 - hitPlanet) * 0.15 * max(0.0, dot(LIGHT_DIR, -rd) * 0.5 + 0.5));
 
     return vec4(clamp(finalPlanetColor.rgb, 0.0, 1.0), max(hitPlanet, corona));
 }
