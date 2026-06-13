@@ -1,0 +1,3 @@
+gamerule advance_time false
+gamerule advance_weather false
+gamerule mob_drops false

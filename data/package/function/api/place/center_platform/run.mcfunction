@@ -1,0 +1,1 @@
+summon happy_ghast 0 60 0 {Silent:1b,Invulnerable:1b,NoAI:1b,equipment:{body:{id:"minecraft:white_harness",count:1}},attributes:[{id:"minecraft:flying_speed",base:0}]}
