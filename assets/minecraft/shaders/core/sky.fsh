@@ -75,7 +75,7 @@ float computeFBMStars3D(in vec3 pos) {
 vec3 backgroundColor3D(in vec3 rd) {
     float noise1 = computeFBMStars3D(rd * 15.0);
     float noise2 = computeFBMStars3D(rd * vec3(35.0, 55.0, 45.0));
-    float noise3 = computeFBMStars3D((rd + vec3(0.5, 0.1, 0.2)) * 12.0 + GameTime * 0.35);
+    float noise3 = computeFBMStars3D((rd + vec3(0.5, 0.1, 0.2)) * 12.0);
     float starShape = noise1 * noise2 * noise3;
     
     float falloffRadius = 0.2;
@@ -96,7 +96,7 @@ vec3 renderSky(in vec3 ro, in vec3 rd) {
     mat3 rotX = mat3(1.0, 0.0, 0.0, 0.0, c, -s, 0.0, s, c);
     vec3 rotatedRd = localRd * rotX;
 
-    float noiseVal = computeFBM3D(rotatedRd * 4.0 + 50.0 + GameTime * 0.0234);
+    float noiseVal = computeFBM3D(rotatedRd * 4.0 + 50.0);
     vec3 distortedRd = rotatedRd + vec3(noiseVal) * 0.15;
 
     float centralFalloff = clamp(1.0 - abs(rotatedRd.y), 0.0, 1.0);
@@ -105,7 +105,7 @@ vec3 renderSky(in vec3 ro, in vec3 rd) {
     float xDirFalloff = cos(atan(rotatedRd.z, rotatedRd.x) * 1.0) * 0.5 + 0.5;
     float xDirFalloffRot = cos(atan(distortedRd.z, distortedRd.x) * 1.0) * 0.5 + 0.5;
 
-    float lowFreqNoiseForFalloff = computeFBM3D(distortedRd * 2.5 - GameTime * 0.0234);
+    float lowFreqNoiseForFalloff = computeFBM3D(distortedRd * 2.5);
     float milkywayShape = clamp(pow(centralFalloffRot, 3.0) - lowFreqNoiseForFalloff * 0.5, 0.0, 1.0) * xDirFalloffRot;
     
     vec3 color;

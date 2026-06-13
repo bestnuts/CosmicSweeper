@@ -7,7 +7,7 @@ vec4 _texture(vec2 uv) {
 }
 
 vec4 drawStar(vec3 ro, vec3 rd, float r, vec3 starColor, vec3 starGlow, out float _t) {
-    float time = GameTime * 12.0;
+    float time = GameTime * 24.0;
     float a = dot(ro, rd)/dot(rd, rd);
     float b = (dot(ro, ro) - r*r)/dot(rd, rd);
     float D = max(0., a*a - b);

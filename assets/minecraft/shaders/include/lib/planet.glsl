@@ -23,10 +23,10 @@ float fbm(vec2 p, float scale, int octaves, float SEED) {
 }
 
 float swirly_fbm(vec2 p, float scale, int octaves, float SEED) {
-    p -= GameTime * 0.004;
+    p -= GameTime * 0.0024;
     float s = 0.0, m = 0.0, a = 1.0;
     for(int i = 0; i < octaves; i++) {
-        s += a * noise(p + GameTime * 0.004 * a, scale, SEED);
+        s += a * noise(p + GameTime * 0.0024 * a, scale, SEED);
         m += a;
         a *= 0.6;
         scale *= 2.0;
@@ -54,7 +54,7 @@ vec4 drawPlanet(vec3 ro, vec3 rd, float r, vec3 skyColor, vec3 atmosphereGlow, o
     float SEED = 0.0;
     vec3 CAMERA = vec3(0.0, 0.0, -1.0);
     vec3 ROTATION_AXIS = vec3(0.3, 1.0, 0.0);
-    float ROTATION_SPEED = 2;
+    float ROTATION_SPEED = 2.4;
     vec3 LAND_COLOR = vec3(0.2, 0.4, 0.0);
     vec3 JUNGLE_COLOR = vec3(0.0, 0.2, 0.0);
     vec3 DESERT_COLOR = vec3(1.0, 0.8, 0.6);
