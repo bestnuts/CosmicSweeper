@@ -1,6 +1,8 @@
 {
     "values": [
         "marker",
-        "player"
+        "player",
+        "item_display",
+        "happy_ghast"
     ]
 }

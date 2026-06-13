@@ -1,0 +1,1 @@
+summon item_display 0.0 64.0 0.0 {Tags:["world.entity","entity.type.resource","resource.earth"],data:{transformation:{translation:[0f,0f,-448f]}},view_range:4f,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,512f],scale:[1f,1f,1f]},item:{id:"minecraft:leather_horse_armor",count:1,components:{"minecraft:item_model":"world:scrap"}}}

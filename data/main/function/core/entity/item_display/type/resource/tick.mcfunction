@@ -1,0 +1,1 @@
+function main:core/entity/item_display/type/resource/center/apply

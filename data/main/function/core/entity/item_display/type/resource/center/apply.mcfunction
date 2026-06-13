@@ -1,0 +1,1 @@
+execute if entity @s[tag=resource.earth] run return run function main:core/entity/item_display/type/resource/center/earth
