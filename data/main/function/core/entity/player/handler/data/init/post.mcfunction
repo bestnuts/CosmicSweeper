@@ -1,0 +1,1 @@
+data modify storage game main.instance.storage.item.last.identify set from storage game main.instance.player.item.components.minecraft:custom_data.data.identify

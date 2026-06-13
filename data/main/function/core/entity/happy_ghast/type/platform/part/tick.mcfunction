@@ -1,1 +1,0 @@
-function main:core/entity/happy_ghast/type/platform/part/align/tick

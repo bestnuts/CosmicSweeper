@@ -1,0 +1,1 @@
+return run execute if score #storage.item.swap V matches 1

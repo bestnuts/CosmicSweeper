@@ -1,0 +1,3 @@
+execute if function package:api/condition/entity/player/is_item_swap run function main:core/entity/player/handler/data/process/item/type/platform/visual/run
+function main:core/entity/player/handler/data/process/item/type/platform/position/run
+execute if entity @s[tag=player.rightclick] if score #blueprint.can_place V matches 1 run function main:core/entity/player/handler/data/process/item/type/platform/place/run

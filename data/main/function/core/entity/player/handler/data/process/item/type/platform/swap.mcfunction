@@ -1,0 +1,1 @@
+execute as @e[type=block_display,tag=entity.blueprint] if score @s id.matched = #origin.id.player V run function main:core/entity/shared/util/kill

@@ -1,1 +1,0 @@
-$execute positioned 0.0 60.0 0.0 rotated $(yaw) 0 run tp @s ^$(x) ^ ^$(z) ~ ~ 

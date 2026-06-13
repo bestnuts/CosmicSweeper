@@ -1,0 +1,2 @@
+execute positioned ~ ~-1.0 ~ if entity @n[type=happy_ghast,tag=entity.type.platform,dx=0,dy=0,dz=0] run return run function main:core/entity/player/handler/data/process/item/type/platform/place/overlap/type/true
+function main:core/entity/player/handler/data/process/item/type/platform/place/overlap/type/false

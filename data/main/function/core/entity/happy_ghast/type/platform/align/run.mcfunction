@@ -1,0 +1,1 @@
+$execute positioned $(x) 60.0 $(z) align xz run tp @s ~ ~ ~

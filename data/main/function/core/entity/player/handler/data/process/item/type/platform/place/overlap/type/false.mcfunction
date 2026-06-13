@@ -1,0 +1,1 @@
+execute positioned ~ ~-1.0 ~ run function main:core/entity/player/handler/data/process/item/type/platform/place/extend/run

@@ -1,0 +1,1 @@
+execute summon block_display run function main:core/entity/player/handler/data/process/item/type/platform/visual/allocate
