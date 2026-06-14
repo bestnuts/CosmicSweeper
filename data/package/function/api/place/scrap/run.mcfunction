@@ -1,2 +1,2 @@
-summon item_display 0.0 64.0 0.0 {interpolation_duration:1,Tags:["world.entity","entity.type.resource","resource.earth","new"],data:{resource:{value:{degree:0f},constant:{degree:0f,radius:0}}},view_range:4f,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1f,1f,1f]}}
+summon item_display 0.0 64.0 0.0 {interpolation_duration:2,Tags:["world.entity","entity.type.resource","resource.earth","new"],data:{resource:{value:{degree:0f},constant:{degree:0f,radius:0}}},view_range:4f,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1f,1f,1f]}}
 execute as @n[type=item_display,tag=new] run function package:api/place/scrap/allocate
