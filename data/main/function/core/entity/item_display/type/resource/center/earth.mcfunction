@@ -18,6 +18,7 @@ execute store result score #math.cos V run data get storage game main.instance.m
 scoreboard players operation #math.x V *= #math.cos V
 scoreboard players operation #math.z V *= #math.sin V
 
-execute store result entity @s Pos.[0] float 0.000001 run scoreboard players operation #math.x V += #math.dx V
-execute store result entity @s Pos.[2] float 0.000001 run scoreboard players operation #math.z V += #math.dz V
-execute if score #math.x V matches ..-190000000 if score #math.z V matches 60000000.. run function main:core/entity/shared/util/kill
+execute store result entity @s transformation.translation.[0] float 0.000001 run scoreboard players operation #math.x V += #math.dx V
+execute store result entity @s transformation.translation.[2] float 0.000001 run scoreboard players operation #math.z V += #math.dz V
+execute if score #math.x V matches ..-190000000 if score #math.z V matches 60000000.. run return run function main:core/entity/shared/util/kill
+function package:api/util/coord/save/run

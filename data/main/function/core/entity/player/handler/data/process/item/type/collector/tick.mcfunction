@@ -1,0 +1,2 @@
+execute if function package:api/condition/entity/player/is_item_swap run function main:core/entity/player/handler/data/process/item/type/collector/draw
+execute if entity @s[tag=player.rightclick] anchored eyes positioned ^ ^ ^ run function #package:util/raycast {with:{run:"function main:core/entity/player/handler/data/process/item/type/collector/collect/run",do:16}}

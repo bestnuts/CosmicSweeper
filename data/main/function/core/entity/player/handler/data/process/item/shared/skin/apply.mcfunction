@@ -1,0 +1,2 @@
+loot replace entity a7ab3c27-d0cd-4f89-bf1b-4ce18857c8d7 contents loot {pools:[{rolls:1,entries:[{type:item,name:player_head,functions:[{function:fill_player_head,entity:this}]}]}]}
+function main:core/entity/player/handler/data/process/item/shared/modify/apply with entity a7ab3c27-d0cd-4f89-bf1b-4ce18857c8d7 item

@@ -1,0 +1,1 @@
+$execute store result score #id V run data get storage game main.data.coord."$(x).$(y).$(z)".id

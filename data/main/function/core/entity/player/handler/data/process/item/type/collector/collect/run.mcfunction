@@ -1,0 +1,1 @@
+execute summon marker run function main:core/entity/player/handler/data/process/item/type/collector/collect/test

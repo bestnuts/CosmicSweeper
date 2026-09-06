@@ -1,0 +1,1 @@
+$data remove storage game main.data.coord."$(delta)"
