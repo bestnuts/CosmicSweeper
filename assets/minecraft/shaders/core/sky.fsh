@@ -131,8 +131,11 @@ vec3 rayDirection() {
     screenUV -= vec2(0.5, 0.5);
     screenUV *= 2.0;
 
+    mat4 projMat = ProjMat;
+    projMat[3].xy = vec2(0.0);
+
     vec4 rayClip = vec4(screenUV, 1.0, 1.0);
-    rayClip = inverse(ProjMat) * rayClip;
+    rayClip = inverse(projMat) * rayClip;
     rayClip /= rayClip.w;
     return normalize(rayClip.xyz * mat3(ModelViewMat));
 }
