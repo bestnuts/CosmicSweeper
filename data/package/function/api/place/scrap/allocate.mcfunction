@@ -5,4 +5,5 @@ execute store result entity @s data.resource.constant.degree float -0.01 run ran
 execute store result entity @s data.resource.constant.radius float 1 run random value -480..-446
 execute store result entity @s transformation.translation.[1] float 1 run random value 2..12
 function main:core/entity/item_display/type/resource/center/apply
+data modify entity @s data.collect set value {identify:"scrap"}
 data modify entity @s item set value {id:"minecraft:leather_horse_armor",count:1,components:{"minecraft:item_model":"world:scrap"}}
