@@ -1,2 +1,2 @@
-execute if function package:api/condition/entity/player/is_item_swap run function main:core/entity/player/handler/data/process/item/swap_with_identify with storage game main.instance.player.item.components.minecraft:custom_data.data
+execute if function package:api/condition/entity/player/is_item_swap run function main:core/entity/player/handler/data/process/item/swap_with_identify with storage game main.instance.storage.item.last
 execute if items entity @s weapon.mainhand * run function main:core/entity/player/handler/data/process/item/run_with_identify with storage game main.instance.player.item.components.minecraft:custom_data.data
