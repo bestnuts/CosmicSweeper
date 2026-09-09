@@ -18,16 +18,16 @@
                 "model": {
                 "type": "minecraft:player_head"
                 },
-                "base": "tool:hand/left_hand",
-                "transformation":{"translation":[-0.1,0.1,-0.4],"left_rotation":[0,1,0,0.1],"right_rotation":[0,1,0,0],"scale":[0.471,0.515,1.515]}
+                "base": "tool:collector/left_hand",
+                "transformation":{"translation":[1.25,1.1,0.1],"left_rotation":[0,1,0,-0.5],"right_rotation":[0,1,0,0],"scale":[0.471,0.515,1.515]}
             },
             {
                 "type": "minecraft:special",
                 "model": {
                 "type": "minecraft:player_head"
                 },
-                "base": "tool:hand/right_hand",
-                "transformation":{"translation":[0.3,0.85,0.5],"left_rotation":[0,1,0,-0.39],"right_rotation":[0,1,0,0],"scale":[0.471,0.515,1.515]}
+                "base": "tool:collector/right_hand",
+                "transformation":{"translation":[0.7,0.8,0.5],"left_rotation":[0,1,0,0.29],"right_rotation":[0,1,0,0],"scale":[0.471,0.515,1.515]}
             }
           ],
           "transformation":{"translation":[0, 0, 0],"left_rotation":[1, 0, 0, -0.17],"right_rotation":[1,0,0,0],"scale":[1, 1, 1]}

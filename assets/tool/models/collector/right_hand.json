@@ -3,6 +3,9 @@
         "particle": "block/soul_sand"
     },
     "display": {
+        "firstperson_righthand": {
+            "rotation": [0, 0, 180]
+        },
         "gui": {
             "scale": [ 0, 0, 0 ]
         },
