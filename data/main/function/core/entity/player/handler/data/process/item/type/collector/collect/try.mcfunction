@@ -1,2 +1,3 @@
+tp @s ~ ~ ~
 function package:api/util/coord/world_to_coord/get_id
 execute as @e[type=item_display] if score @s id.resource = #id V run function main:core/entity/player/handler/data/process/item/type/collector/collect/success with entity @s data.collect
