@@ -1,4 +1,5 @@
 kill @e[tag=world.entity]
+data remove storage game main.data.coord
 function package:api/place/center_platform/run
 summon item_display 0.0 64.0 0.0 {Tags:["world.entity"],UUID:[I;-1481950169,-791851127,-1088729887,-2007512873],view_range:0f}
 summon item_display 0.0 64.0 0.0 {interpolation_duration:2,Tags:["world.entity","entity.type.sphere","sphere.sun"],view_range:4f,transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,-1024f],scale:[1f,1f,1f]},item:{id:"minecraft:leather_horse_armor",count:1,components:{"minecraft:item_model":"world:sun"}}}
