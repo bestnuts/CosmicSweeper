@@ -1,0 +1,1 @@
+title @s subtitle ["",{storage:"game",nbt:"main.instance.interaction.data.looking.subtitle",interpret:true}]

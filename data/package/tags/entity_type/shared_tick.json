@@ -3,6 +3,7 @@
         "marker",
         "player",
         "item_display",
-        "happy_ghast"
+        "happy_ghast",
+        "interaction"
     ]
 }

@@ -1,0 +1,1 @@
+execute if entity @s[tag=entity.type.seat] run return run function main:core/entity/interaction/type/seat/tick

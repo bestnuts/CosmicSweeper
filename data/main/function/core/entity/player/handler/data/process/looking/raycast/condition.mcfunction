@@ -1,0 +1,2 @@
+execute as @n[type=interaction,dx=0] positioned ~-0.99 ~-0.99 ~-0.99 if entity @s[dx=0] positioned ~0.99 ~0.99 ~0.99 run return run function main:core/entity/player/handler/data/process/looking/raycast/condition_return
+return fail
