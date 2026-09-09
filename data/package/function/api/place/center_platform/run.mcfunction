@@ -1,1 +1,1 @@
-summon happy_ghast 0.0 60.0 0.0 {Tags:["world.entity","entity.type.platform"],Silent:1b,Invulnerable:1b,NoAI:1b,data:{platform:{coordinate:[0,0]}}}
+summon happy_ghast 0.0 60.0 0.0 {Tags:["world.entity","entity.type.platform"],Silent:1b,Invulnerable:1b,NoAI:1b,data:{platform:{pos:[0f,0f],coordinate:[0,0]}}}
