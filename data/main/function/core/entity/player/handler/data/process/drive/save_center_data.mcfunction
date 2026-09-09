@@ -1,0 +1,2 @@
+execute store result entity @s data.platform.pos.[0] float 0.01 run scoreboard players get #math.x V
+execute store result entity @s data.platform.pos.[1] float 0.01 run scoreboard players get #math.z V

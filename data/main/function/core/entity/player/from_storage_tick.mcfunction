@@ -1,7 +1,7 @@
 execute if function package:api/condition/entity/player/is_join run return 0
 tag @s add this.origin.player
 function main:core/entity/player/handler/data/init/pre
-function main:core/entity/player/handler/data/process/all
+execute if function main:core/entity/player/handler/data/process/all run function main:core/entity/player/handler/data/process/riding
 function main:core/entity/player/handler/data/init/post
 
 tag @s remove this.origin.player

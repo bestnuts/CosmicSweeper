@@ -1,2 +1,2 @@
 summon happy_ghast 0.0 60.0 0.0 {Tags:["world.entity","entity.type.platform"],Silent:1b,Invulnerable:1b,NoAI:1b,data:{platform:{pos:[0f,0f],coordinate:[0,0]}}}
-summon interaction 0.0 64.0 0.0 {Tags:["world.entity","entity.type.seat"],Silent:1b,data:{interact:{run:{this:"function main:core/entity/interaction/type/seat/sit/try",target:"function main:core/entity/interaction/type/seat/sit/from_player_try"}},looking:{subtitle:"조종하기"}}}
+summon interaction 0.0 64.0 0.0 {Tags:["world.entity","entity.type.seat","seat.drive"],Silent:1b,data:{interact:{run:{this:"function main:core/entity/interaction/type/seat/sit/try",target:"function main:core/entity/interaction/type/seat/sit/from_player_try"}},looking:{subtitle:"조종하기"}}}

@@ -1,0 +1,1 @@
+return run execute on vehicle if entity @s[tag=seat.drive]
